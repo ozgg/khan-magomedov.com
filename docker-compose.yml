@@ -1,0 +1,11 @@
+services:
+  database:
+    image: postgres:18-alpine
+    volumes:
+      - ./tmp/db:/var/lib/postgresql
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_INITDB_ARGS: "--lc-collate=ru_RU.UTF-8 --lc-ctype=ru_RU.UTF-8"
+    ports:
+      - "5432:5432"
