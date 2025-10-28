@@ -8,6 +8,8 @@
 #   slug [String]
 #   updated_at [DateTime]
 class Component < ApplicationRecord
+  has_many :simple_images, dependent: :nullify
+
   validates :slug,
             format: /\A[a-z][a-z_]{0,30}[a-z]\z/,
             uniqueness: true
