@@ -13,5 +13,5 @@ class SimpleImage < ApplicationRecord
   include SimpleImageUploader::Attachment(:image)
 
   belongs_to :component, optional: true
-  has_many :simple_image_infos, dependent: :delete_all
+  has_many :simple_image_texts, dependent: :delete_all
 end

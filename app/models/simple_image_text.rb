@@ -10,7 +10,7 @@
 #   language_id [Language]
 #   simple_image_id [SimpleImage]
 #   updated_at [DateTime]
-class SimpleImageInfo < ApplicationRecord
+class SimpleImageText < ApplicationRecord
   belongs_to :simple_image
   belongs_to :language
 
